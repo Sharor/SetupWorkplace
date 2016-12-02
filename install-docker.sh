@@ -11,7 +11,8 @@ sudo apt-get -y -q install linux-image-extra-$(uname -r) linux-image-extra-virtu
 sudo apt-get update
 sudo apt-get -y install docker-engine
 sudo service docker start
-sudo usermod -a -G docker ${USER} # remove dependency on sudo access to docker
+sudo usermod -aG docker $USER # remove dependency on sudo access to docker
+
 
 sudo apt-get -y autoremove
 sudo apt-get -y autoclean
